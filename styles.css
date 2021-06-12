@@ -57,14 +57,14 @@ section{
 }
 
 .image-bio>aside {
-	width: 70%;
+	width: 80%;
 	right: 0px;
     font-size: 20px;
 	color: purple;
     position: absolute;
     text-align: justify;
-    padding: 20px;
-	background-color: rgb(55%,85%,85%,70%);
+    padding: 10px;
+	background-color: rgb(55%,85%,85%,60%);
 }
 
 .image-bio>img{
@@ -85,7 +85,7 @@ abbr{
 }
 
 .image-bio{
-	height:400px;
+	height:470px;
 	overflow:hidden;
 }
 
