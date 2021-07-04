@@ -126,7 +126,7 @@ function showGameInstructions(){
     context.font = "20px Comic Sans MS";
     console.log(canvas.width, canvas.height, window.innerHeight, window.innerWidth)
     context.fillText("Try clicking on 5 arbitrary spots within this box, and play the game.",canvas.width/2, canvas.height/2);
-    context.fillText("Game Instruction: Try to press the keys on your keyboard that appeared in the highlighted shape.",canvas.width/2, canvas.height/2 + 40);
+    context.fillText("Game Instruction: To score press the keys on your keyboard that appeared in the highlighted shape.",canvas.width/2, canvas.height/2 + 40);
     gameInstructionShown = true;
 }
 
@@ -203,7 +203,6 @@ class component{
             case 0:
                 drawEllipse(this.x, this.y, this.type);
                 break;
-
             case 1:
                 drawRectangle(this.x, this.y, this.type);
                 break;
@@ -249,7 +248,7 @@ function drawRectangle(x, y, type){
 
 function drawSquare(x, y, type){
     context.save();
-    context.fillRect(x-50, y-50, 90, 90);
+    context.fillRect(x-50, y-50, 100, 100);
     context.restore();
     context.fillStyle = "#FFFFFF";
     context.fillText(type, x, y);
