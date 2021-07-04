@@ -125,7 +125,7 @@ function showGameInstructions(){
     context.textAlign = "center";
     context.font = "20px Comic Sans MS";
     console.log(canvas.width, canvas.height, window.innerHeight, window.innerWidth)
-    context.fillText("Please click on 5 arbitrary spots within this box, and enjoy the game.",canvas.width/2, canvas.height/2);
+    context.fillText("Try clicking on 5 arbitrary spots within this box, and play the game.",canvas.width/2, canvas.height/2);
     context.fillText("Game Instruction: Try to press the keys on your keyboard that appeared in highlightes shapes.",canvas.width/2, canvas.height/2 + 40);
     gameInstructionShown = true;
 }
