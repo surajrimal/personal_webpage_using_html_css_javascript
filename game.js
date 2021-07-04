@@ -186,11 +186,11 @@ class component{
     this.x = x;
     this.y = y;
     this.type = type;
-    this.color = "#1E5608";
+    this.color = "#1F5608";
     } 
     
     select = function(){
-        this.color = "#671904";
+        this.color = "#271904";
     }
 
     deselect = function(){
@@ -201,6 +201,9 @@ class component{
         context.fillStyle = this.color;
         switch(this.type){
             case 0:
+                drawEllipse(this.x, this.y, this.type);
+                break;
+
             case 1:
                 drawRectangle(this.x, this.y, this.type);
                 break;
@@ -273,6 +276,17 @@ function drawTriangle(x, y, type){
     context.fillStyle = "#FFFFFF";
     context.fillText(type, x + 70, y + 70);
 
+}
+
+function drawEllipse(x, y, type){
+    context.save(); // save state
+    context.beginPath();
+    context.ellipse(x, y, 60, 80, Math.PI/4, 0, 2*Math.PI);
+    context.fill();
+    context.restore(); // restore to original state
+    context.stroke();
+    context.fillStyle = "#FFFFFF";
+    context.fillText(type, x, y);
 }
 
 function getRandomInt(max) {
