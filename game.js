@@ -125,8 +125,8 @@ function showGameInstructions(){
     context.textAlign = "center";
     context.font = "20px Comic Sans MS";
     console.log(canvas.width, canvas.height, window.innerHeight, window.innerWidth)
-    context.fillText("Please click on 5 arbitrary spots within this box, and enjoy the game.",canvas.width/2, canvas.height/2);
-    context.fillText("Game Instruction: Try to press the keys on your keyboard that appeared in highlightes shapes.",canvas.width/2, canvas.height/2 + 40);
+    context.fillText("Try clicking on 5 arbitrary spots within this box, and play the game.",canvas.width/2, canvas.height/2);
+    context.fillText("Game Instruction: To score press the keys on your keyboard that appeared in the highlighted shape.",canvas.width/2, canvas.height/2 + 40);
     gameInstructionShown = true;
 }
 
@@ -186,11 +186,11 @@ class component{
     this.x = x;
     this.y = y;
     this.type = type;
-    this.color = "#1E5608";
+    this.color = "#1F5608";
     } 
     
     select = function(){
-        this.color = "#671904";
+        this.color = "#271904";
     }
 
     deselect = function(){
@@ -201,6 +201,8 @@ class component{
         context.fillStyle = this.color;
         switch(this.type){
             case 0:
+                drawEllipse(this.x, this.y, this.type);
+                break;
             case 1:
                 drawRectangle(this.x, this.y, this.type);
                 break;
@@ -273,6 +275,17 @@ function drawTriangle(x, y, type){
     context.fillStyle = "#FFFFFF";
     context.fillText(type, x + 70, y + 70);
 
+}
+
+function drawEllipse(x, y, type){
+    context.save(); // save state
+    context.beginPath();
+    context.ellipse(x, y, 60, 80, Math.PI/4, 0, 2*Math.PI);
+    context.fill();
+    context.restore(); // restore to original state
+    //context.stroke();
+    context.fillStyle = "#FFFFFF";
+    context.fillText(type, x, y);
 }
 
 function getRandomInt(max) {
