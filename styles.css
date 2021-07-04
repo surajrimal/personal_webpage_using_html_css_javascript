@@ -1,6 +1,5 @@
-
 body{
-	background-color:rgb(46, 151, 151);
+	background-color:rgb(80%,80%,80%);
 }
 
 
@@ -29,6 +28,41 @@ table, th, td{
 	padding: 10px;
 }
 
+button{
+	margin-top: 5px;
+}
+
+input:focus{
+	border: 1px solid green !important;
+}
+
+input:required{
+	border: 2px solid green !important;
+}
+
+/* Footer */
+footer>table>tbody>tr>td{
+	vertical-align: top;
+	width: 70%;
+}
+
+.social-icons >a>img{
+	width: 40px;
+}
+
+.newsletter{
+	text-align: left;
+}
+
+.newsletter > input{
+	padding: 10px;
+	border: 1px solid green;
+}
+
+.newsletter > button{
+	margin: 10px auto;
+}
+
 /*
 	Styles classes that can be reused
 */
@@ -40,10 +74,20 @@ table, th, td{
 	float:right;
 }
 
-.main-navigation{
-	width :70%;
+.navigation-container{
+	width :75%;
 	margin: auto;
-	padding: 10px;
+}
+
+.navigation-container>img{
+	height: 150px;
+	width: 100%;
+	object-fit: cover;
+	top:0px;
+}
+
+.main-navigation{
+	width: 100%;
 	background-color:rgb(85%,85%,85%);
 }
 
@@ -69,23 +113,19 @@ table, th, td{
 }
 
 /* Page: Home */
-.image-bio{
-	position: relative;
-}
 .image-bio>aside {
-	width: 80%;
+	width: 40%;
 	right: 0px;
     font-size: 20px;
-	color: purple;
     position: absolute;
     text-align: justify;
-    padding: 10px;
-	background-color: rgb(55%,85%,85%,60%);
+    padding: 15px;
+	background-color: rgb(50%,80%,80%, 10%);
 }
 
 .image-bio>img{
 	width: 100%;
-	height: 100%
+	height: 100%;
 	object-fit: cover;
 }
 
@@ -94,15 +134,17 @@ abbr{
 }
 
 .content{
-	width: 70%;
+	width: 75%;
 	margin: auto;
 	display: block;
 	padding: 12px;
 }
 
 .image-bio{
-	height:470px;
+	height:400px;
 	overflow:hidden;
+	position:relative;
+	padding: 0px;
 }
 
 .quotes{
@@ -124,6 +166,12 @@ abbr{
 	background-color: rgb(85%,85%,85%);
 }
 
+.day-container{
+	border-radius: 5px;;
+	box-shadow: 2px 2px 2px gray;
+	overflow: hidden;
+}
+
 .weekday{
 	color: white;
 	font-weight: bold;
@@ -139,7 +187,7 @@ abbr{
 	font-weight: bold;
 	font-size: 22px;
 	width: 100%;
-	background-color:blueviolet;
+	background-color:darkred;
 }
 
 .work>img{
@@ -148,9 +196,6 @@ abbr{
 	position: relative;
 	top: 3px;
 }
-
-
-
 
 /* Page: gallery */
 #photo-gallery-table{
@@ -174,9 +219,6 @@ table>caption{
 address{
 	display: inline;
 }
-
-
-
 
 /*Page: Contact me */
 #contact-me{
@@ -206,7 +248,8 @@ button{
 }
 
 #error{
-	background-color: indianred;
+	background-color: darkred;
 	padding: 10px;
 	margin-top: 5px;
+	border-radius: 5px;;
 }
